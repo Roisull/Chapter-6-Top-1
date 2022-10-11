@@ -1,5 +1,6 @@
 package com.example.chapter6top1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -17,7 +18,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.btnGo.setOnClickListener {
-            viewModel.applyBlur(1)
+            viewModel.applyBlur(blurLevel)
+        }
+
+        binding.btnGoToLatihan.setOnClickListener {
+            startActivity(Intent(this, LatihanActivity::class.java))
         }
     }
+
+    private val blurLevel: Int
+    get() =
+        when(binding.rgBlured.checkedRadioButtonId){
+            R.id.rbLittleBlured -> 1
+            R.id.rbMoreBlured -> 2
+            R.id.rbMostBlured -> 3
+            else -> 1
+        }
 }

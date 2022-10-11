@@ -46,17 +46,20 @@
             android:id="@+id/rbLittleBlured"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A Little Blured"/>
+            android:text="A Little Blured"
+            android:textColor="@color/black"/>
         <RadioButton
             android:id="@+id/rbMoreBlured"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="More Blured"/>
+            android:text="More Blured"
+            android:textColor="@color/black"/>
         <RadioButton
             android:id="@+id/rbMostBlured"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Most Blured"/>
+            android:text="The Most Blured"
+            android:textColor="@color/black"/>
     </RadioGroup>
 
     <Button
@@ -79,4 +82,13 @@
         app:layout_constraintTop_toBottomOf="@id/rgBlured"
         app:layout_constraintHorizontal_bias="0"
         android:layout_marginLeft="20dp"/>
+
+    <Button
+        android:id="@+id/btnGoToLatihan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="latihan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
